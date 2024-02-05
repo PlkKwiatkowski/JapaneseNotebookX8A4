@@ -1,0 +1,131 @@
+<!DOCTYPE html> <!--kant believe it was made mostly by chat gpt-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本語学習ノート</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your CSS file -->
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6; /* Lighter gray background */
+    color: #333; /* Dark gray text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header, nav, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; /* White background for sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 10px;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Lighter gray background for main */
+    margin: 10px;
+}
+
+h1, h2, h3 {
+    color: #336699; /* Calm blue for headings */
+    margin-bottom: 10px; /* Add margin bottom for line break */
+}
+
+a {
+    color: #6699cc; /* Light blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+ul li img {
+    max-height: 100px; /* Set maximum width */
+    width: auto; /* Maintain aspect ratio */
+}
+ul li img:first-child {
+    display: inline-block;
+}
+ul li img:first-child::before {
+   content: ' '; display: block;
+}
+
+</style>
+<body>
+<main>
+	<h1>TaeKim</h1>
+	<br>
+	<ul>
+	<li><a href=https://guidetojapanese.org/learn/complete/conjunctions>Conjunctions</a> から、ので
+	<li><a href=https://guidetojapanese.org/learn/complete/multiple_nouns>Listing multiple nouns</a> と、や、とか、か
+	<li><a href=https://guidetojapanese.org/learn/complete/explanation>Explanations</a> ん、の
+	<li><a href=https://guidetojapanese.org/learn/complete/desire_volition>Desire and Volition</a> ～たい、～よう、～ましょう
+	<li><a href=https://guidetojapanese.org/learn/complete/questionwords>Question words and particles</a> も、でも、か、
+	<li><a href=https://guidetojapanese.org/learn/complete/verb_phrase>Phrasing verb clauses</a>
+	<li><a href=https://guidetojapanese.org/learn/complete/multiple_verbs>Listing multiple verbs</a> past+り、　～し
+	<li>Simultaneous actions ～ながら
+	<li><a href=https://guidetojapanese.org/learn/complete/amounts>Various amounts</a> だけ, しか,　～すぎる
+	<li><a href=https://guidetojapanese.org/learn/complete/comparisons>Comparisons</a>　方、　より、　ほど
+	<li><a href=https://guidetojapanese.org/learn/complete/directions>Directions</a>　方、　どうやって
+	</ul>
+	
+	<h1>ホリミヤ</h1>
+	<br>
+	<ul>
+	<li>～ちゃう<br><img src="～ちゃう.png" alt=”おこらせちゃったの” >
+	<li>Volitional form ～られてる<br><img src="～られてる.png" alt="追いつめられてる" >
+	<li>しか<br><img src="しか.png" ><!--alt="しか">-->
+	</ul>
+</main>
+</body>
+
+<script>
+    // Get all images on the page
+    const images = document.querySelectorAll('img');
+
+    // Add click event listener to each image
+    images.forEach(image => {
+        // Add click event listener to the original image
+        image.addEventListener('click', (event) => {
+            // Check if a copy of the image already exists
+            const existingCopy = document.querySelector('.image-copy');
+            
+            // If no copy exists, create a copy of the image and display it
+            if (!existingCopy) {
+                const imageCopy = image.cloneNode(true); // Create a deep copy of the image
+                imageCopy.classList.add('image-copy'); // Add a class to identify the copy
+                imageCopy.style.position = 'fixed'; // Position the copy fixed to stay in place
+                imageCopy.style.top = '50%'; // Position vertically centered
+                imageCopy.style.left = '50%'; // Position horizontally centered
+                imageCopy.style.transform = 'translate(-50%, -50%)'; // Center the copy
+                imageCopy.style.maxWidth = '80%'; // Limit the max width of the copy to 80% of viewport width
+                imageCopy.style.maxHeight = '80%'; // Limit the max height of the copy to 80% of viewport height
+                imageCopy.style.zIndex = '9999'; // Ensure the copy is above other content
+                document.body.appendChild(imageCopy); // Append the copy to the body
+            }
+            
+            // Prevent default click behavior
+            event.preventDefault();
+        });
+    });
+
+    // Add click event listener to the copy to remove it when clicked
+    document.addEventListener('click', (event) => {
+        const clickedElement = event.target;
+        if (clickedElement.classList.contains('image-copy')) {
+            clickedElement.remove();
+        }
+    });
+</script>
+
+
+</html>
