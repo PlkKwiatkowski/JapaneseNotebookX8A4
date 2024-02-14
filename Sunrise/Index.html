@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
   <title>Sunrise</title>
   <style>
     :root {
@@ -11,7 +11,17 @@
       --animation-state: paused;
     }
 
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
     body {
+      overflow:hidden;
       background-color: black;
       margin: 0;
       padding: 0;
@@ -23,8 +33,10 @@
 
     .container {
       position: relative;
-      width: 3996px;
-      height: 2664px;
+      height: 80%;
+      margin: auto;
+      
+      aspect-ratio:3/2;
     }
 
     .image-container {
@@ -36,58 +48,52 @@
     }
 
     .image-container img {
-      /* max-width: 100%; */
-      /* height: auto; */
       display: block;
       margin: 0 auto;
     }
 
     .sun {
       position: absolute;
-      top: 1050px;
-      left: 1550px;
-      width: 70px;
-      height: 70px;
+      top: 39%;
+      left: 38%;
+      width: 2%;
+      aspect-ratio: 1/1;
       background-color:
         #ffbe0d;
       border-radius: 50%;
 
       box-shadow:
-        0 0 0 10px #ffbe0d80,
-        0 0 0 20px #ffbe0d40,
-        0 0 40px 100px #ffbe0d10;
+        0 0 0 0.3% #ffbe0d80,
+        0 0 0 0.6% #ffbe0d40,
+        0 0 1.2% 3% #ffbe0d10;
       animation: moveSun var(--total-time) linear infinite;
-      /* Animation for moving the sun */
       animation-play-state: var(--animation-state);
     }
 
     @keyframes moveSun {
       0% {
         transform: translateY(0);
-        /* Initial position */
         opacity: 1;
-        /* Initial opacity */
       }
 
       50% {
-        transform: translateY(150px);
-        /* Halfway position */
+        transform: translateY(180%);
         opacity: 1;
-        /* Maintain opacity */
+
       }
 
       51% {
-        transform: translateY(150px);
-        /* Halfway position */
+        transform: translateY(180%);
+
         opacity: 0;
-        /* Maintain opacity */
+
       }
 
       100% {
-        transform: translateY(300px);
-        /* Final position */
+        transform: translateY(400%);
+
         opacity: 0;
-        /* Disappear */
+
       }
     }
 
@@ -101,22 +107,19 @@
       left: 0;
       background: linear-gradient(to top,
           rgba(255, 255, 255),
-          /* White with 70% opacity */
+
           rgb(243, 237, 204),
-          /* Light yellow */
+
           rgb(211, 89, 58),
-          /* Orange */
+
           rgba(204, 27, 41),
-          /* Red */
+
           rgba(204, 27, 41),
-          /* Red */
+
+
           rgb(141, 28, 103),
-          /* Light pin k */
-          rgb(141, 28, 103),
-          /* Light pin k */
-          rgb(124, 34, 136)
-          /* Light purple */
-        );
+
+          rgb(124, 34, 136));
       animation: moveSky var(--total-time) linear infinite;
       mix-blend-mode: color-burn;
       animation-play-state: var(--animation-state);
@@ -125,17 +128,16 @@
     @keyframes moveSky {
       0% {
         top: -50%;
-        /* Initial position */
       }
 
       90% {
         top: 0%;
-        /* Final position */
+
       }
 
       100% {
         top: 0%;
-        /* Final position */
+
       }
     }
 
@@ -150,76 +152,76 @@
     @keyframes colorChange {
       0% {
         background: rgba(255, 255, 255);
-        /* White with 70% opacity */
+
       }
 
       10% {
         background: rgba(255, 238, 153);
-        /* Light yellow */
+
       }
 
       20% {
         background: rgba(255, 221, 51);
-        /* Yellow */
+
       }
 
       30% {
         background: rgba(255, 191, 0);
-        /* Brighter orange */
+
       }
 
       40% {
         background: rgba(255, 140, 0);
-        /* Orange */
+
       }
 
       50% {
         background: rgb(199, 30, 30);
-        /* Red */
+
       }
 
       60% {
         background: rgb(145, 43, 63);
-        /* Light pink */
+
       }
 
       70% {
         background: rgb(97, 49, 57);
-        /* Pink */
+
       }
 
       80% {
         background: rgb(71, 40, 71);
-        /* Light purple */
+
       }
 
       90%,
       100% {
         background: rgb(48, 35, 48);
-        /* Light purple (same as 80%) */
+
       }
     }
 
     .ground-img {
       animation: fadeOut var(--total-time) linear forwards infinite;
-      /* Use linear timing function for consistent opacity change */
+
       animation-play-state: var(--animation-state);
     }
 
     @keyframes fadeOut {
       from {
         opacity: 1;
-        /* Start opacity */
+
       }
 
       to {
         opacity: 0;
-        /* End opacity */
+
       }
     }
 
     .blackout {
-      
+
       background-color: black;
 
       animation: blackout var(--total-time) infinite;
@@ -229,30 +231,31 @@
     @keyframes blackout {
       0% {
         opacity: 1;
-        /* Start opacity */
+
       }
 
       1.2920% {
         opacity: 0;
-        /* End opacity */
+
       }
 
       97.9328% {
         opacity: 0;
-        /* End opacity */
+
       }
 
       100% {
         opacity: 1;
-        /* End opacity */
+
       }
     }
-    h1{
-      font-family:'Courier New', Courier, monospace;
-      font-size: 72px;
+
+    h1 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 3%;
       color: #666;
       margin: auto;
-  width: 50%;
+      width: 50%;
     }
   </style>
 </head>
@@ -274,17 +277,13 @@
     <div class="image-container">
       <img class="ground-img" src="Ground.png" alt="Image 5">
     </div>
-    <div onclick="start()" class="blackout image-container"><h1>Click anywhere to start</h1></div>
-    <!-- keyframes together with music
-    music
+    <div onclick="start()" class="blackout image-container">
+      <h1>Click anywhere to</h1>
+    </div>
 
-    1.2920%
-    97.9328%
-    100 % -->
   </div>
 </body>
 <script>
-
   var audio = new Audio('I_m_in_love_with_someone_who.mp3');
   audio.loop = true;
 
@@ -292,11 +291,7 @@
     document.documentElement.style.setProperty('--animation-state', 'running');
     audio.play();
   }
-//
-//   var el = document.getElementById('music');
-//   el.style.animation = 'none';
-//   el.offsetHeight; /* trigger reflow */
-//   el.style.animation = null; 
+
 </script>
 
 </html>
