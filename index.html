@@ -1,16 +1,18 @@
-<!DOCTYPE html> <!--kant believe it was made mostly by chat gpt-->
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>日本語学習ノート</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your CSS file -->
+    <link rel="shortcut icon" type="image/jpg" href="https://icons8.com/icon/43638/note"/>
+    <!-- <link rel="icon" type="image/x-icon" href="https://icons8.com/icon/98Ubs3k3HHbi/japan"> -->
 </head>
 <style>
 body {
     font-family: Arial, sans-serif;
-    background-color: #f6f6f6; /* Lighter gray background */
-    color: #333; /* Dark gray text color */
+    background-color: #f6f6f6; 
+    color: #333; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -22,43 +24,56 @@ body {
 header, nav, footer {
     text-align: center;
     padding: 20px;
-    background-color: #fff; /* White background for sections */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     margin: 10px;
 }
 
 main {
     text-align: center;
     padding: 20px;
-    background-color: #f9f9f9; /* Lighter gray background for main */
+    background-color: #f9f9f9; 
     margin: 10px;
 }
 
 h1, h2, h3 {
-    color: #336699; /* Calm blue for headings */
-    margin-bottom: 10px; /* Add margin bottom for line break */
+    color: #336699; 
+    margin-bottom: 10px; 
 }
 
 a {
-    color: #6699cc; /* Light blue for links */
+    color: #6699cc; 
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
 }
-ul li img {
-    max-height: 100px; /* Set maximum width */
-    width: auto; /* Maintain aspect ratio */
-}
-ul li img:first-child {
-    display: inline-block;
-}
-ul li img:first-child::before {
-   content: ' '; display: block;
-}
 
+#galery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    align-content:flex-start;
+    margin-left:-80px;
+}
+#galery img {
+    max-height: 150px; 
+    width: auto; 
+    padding:15px;
+    padding-left:55px;
+    position: relative;
+}
+#galery span{
+    font-size: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin-right:-40px;
+    margin-left:-15px;
+}
 </style>
 <body>
 <main>
@@ -81,7 +96,7 @@ ul li img:first-child::before {
 <!-- 	<li><a href=https://guidetojapanese.org/learn/complete/appearance>Appearance</a>　よう、みたい、～そう、らしい、っぽい -->
 <!-- 	<li><a href=https://guidetojapanese.org/learn/complete/trying>Trying</a>　ようにする、ようになる、violitionalとする、てformみる -->
 <!-- 	<li><a href=https://guidetojapanese.org/learn/complete/unintended>Intention</a>　つもり、てformしまう、ちゃう・じゃう、ちまう・じまう -->
-	<li><a href=https://guidetojapanese.org/learn/complete/conditional>Conditional</a>　ぇば、pastら（ば）、なら（ば）、と・だと、ては*、きゃ・ちゃ
+    <li><a href=https://guidetojapanese.org/learn/complete/conditional>Conditional</a>　ぇば、pastら（ば）、なら（ば）、と・だと、ては*、きゃ・ちゃ
 <!--	<li><a href=https://guidetojapanese.org/learn/complete/embedded_questions>Phrasing questions</a>　Xか、。。。、Xどうか、。。。 -->
 <!-- 	<li><a href=https://guidetojapanese.org/learn/complete/consequences>Consequences</a>　teも、teもいい  -->
 	<li><a href=https://guidetojapanese.org/learn/complete/required>Must/Must not</a>　conditional — いけない、ならない、 だめ
@@ -89,34 +104,29 @@ ul li img:first-child::before {
 	<li><a href=https://guidetojapanese.org/learn/complete/requests>Requests</a>　下さい・ちょうだい、ないで下さい・ちょうだい
 	<li><a href=https://guidetojapanese.org/learn/complete/causative_passive>Causative and passive</a>　させる、られる
 	<li><a href=https://guidetojapanese.org/learn/complete/command>Commands</a>　なさい・な、teform欲しい、～ろ・～え、な
-
 	</ul>
 	
 	<h1>ホリミヤ</h1>
 	<br>
-	<ul>
-	<li>～ちゃう<br><img src="～ちゃう.png" alt=”おこらせちゃったの” >
-	<li>Volitional form ～られてる<br><img src="～られてる.png" alt="追いつめられてる" >
-	<li>られる<br><img src="られる.jpg" alt="殴られた" >
-	<li>しか<br><img src="しか.png" ><!--alt="しか"--> 
-	<li>しか<br><img src="しか２.jpg" ><!--alt="しか"--> 
-	<li>きゃ<br><img src="きゃ.jpg"＞ <!--alt="追いつめられてる"--> 
-	</ul>
+	<div id="galery">
+        <img src="～ちゃう.png" alt=”おこらせちゃったの” ><span>～ちゃう</span>
+        <img src="～られてる.png" alt="追いつめられてる" ><span>～られてる</span>
+        <img src="られる.jpg" alt="殴られた" ><span>られる</span>
+        <img src="しか.png"  ><!--alt="しか"--> <span>しか</span>
+        <img src="しか２.jpg"><!--alt="しか"--> <span>しか</span>
+        <img src="きゃ.jpg"＞> <!--alt="追いつめられてる"--> <span>きゃ</span>
+    </div>
 </main>
 </body>
 
 <script>
-    // Get all images on the page
+    //mostly done by chat-gpt!
     const images = document.querySelectorAll('img');
 
-    // Add click event listener to each image
     images.forEach(image => {
-        // Add click event listener to the original image
         image.addEventListener('click', (event) => {
-            // Check if a copy of the image already exists
             const existingCopy = document.querySelector('.image-copy');
             
-            // If no copy exists, create a copy of the image and display it
             if (!existingCopy) {
                 const imageCopy = image.cloneNode(true); // Create a deep copy of the image
                 imageCopy.classList.add('image-copy'); // Add a class to identify the copy
