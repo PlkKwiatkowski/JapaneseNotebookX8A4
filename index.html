@@ -182,7 +182,10 @@ a:hover {
 	function handleCharacterClick(event) {
 	    // Check if the clicked element is a text node
 	        // Show an alert with the clicked character
-	        indow.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
+	        window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
+	        window.open('https://www.wanikani.com/kanji/'+event.target.textContent, '_blank');
+	        window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
+	        window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
 	    
 	}
 			
