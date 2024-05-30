@@ -177,17 +177,31 @@ a:hover {
 	// // Add event listener to the specific container
 	// document.getElementById('WK_elements').addEventListener('click', handleSpanClick);
 
-	document.getElementById('WK_elements').addEventListener('click', handleCharacterClick);
+	// document.getElementById('WK_elements').addEventListener('click', handleCharacterClick);
 	
-	function handleCharacterClick(event) {
-	    // Check if the clicked element is a text node
-	        // Show an alert with the clicked character
-	        window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
-	        window.open('https://www.wanikani.com/kanji/'+event.target.textContent, '_blank');
-	        window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
-	        window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
+	// function handleCharacterClick(event) {
+	//     // Check if the clicked element is a text node
+	//         // Show an alert with the clicked character
+	//         window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
+	//         window.open('https://www.wanikani.com/kanji/'+event.target.textContent, '_blank');
+	//         window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
+	//         window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
 	    
+	// }
+
+	content =  document.getElementById('WK_elements').textContent;
+	spanned_content = '';
+	for (let i = 0; i < spanned_content.length; i++) {
+	    // Check if the character is not a space
+	    if (spanned_content[i] !== ' ') {
+		// Wrap the character in a span element
+		modifiedContent += '<span>' + spanned_content[i] + '</span>';
+	    } else {
+		// If it's a space, just append it as it is
+		modifiedContent += ' ';
+	    }
 	}
+	 document.getElementById('WK_elements').innerHTML = spanned_content;
 			
 </script>
 
