@@ -80,7 +80,8 @@ a:hover {
 <main>
 	<h1>WaniKani</h1>
 	<div id="WK_elements">
-		<span>汚す</span> <span>常識</span> <span>偶</span> <span>難</span> <span>深刻</span> <span>脅威</span> <span>灰</span> <span>選挙</span> <span>損失</span>
+		<span>汚す</span> <span>常識</span> <span>偶</span> <span>難</span> <span>深刻</span> <span>脅威</span> <span>灰</span> <span>選挙</span> <span>損失</span> </break>
+		絆 憐れむ それでも 周 周り愛想 優 寄り添おう魂 遠慮 狩 目的 介 行動して 偉 躊躇 黙 奢り
 	</div>
 	<h1>TaeKim</h1>
 	<br>
@@ -166,16 +167,26 @@ a:hover {
     });
 
 	// Open wanikani listener
-	function handleSpanClick(event) {
-	    if (event.target.tagName.toLowerCase() === 'span') {
-		// Open a new tab
-		window.open('https://www.wanikani.com/vocabulary/'+event.target.innerHTML, '_blank');
+	// function handleSpanClick(event) {
+	//     if (event.target.tagName.toLowerCase() === 'span') {
+	// 	// Open a new tab
+	// 	window.open('https://www.wanikani.com/vocabulary/'+event.target.innerHTML, '_blank');
+	//     }
+	// }
+	
+	// // Add event listener to the specific container
+	// document.getElementById('WK_elements').addEventListener('click', handleSpanClick);
+
+	document.getElementById('WK_elements').addEventListener('click', handleCharacterClick);
+	
+	function handleCharacterClick(event) {
+	    // Check if the clicked element is a text node
+	    if (event.target.nodeType === Node.TEXT_NODE) {
+	        // Show an alert with the clicked character
+	        indow.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
 	    }
 	}
-	
-	// Add event listener to the specific container
-	document.getElementById('WK_elements').addEventListener('click', handleSpanClick);
-	
+			
 </script>
 
 
