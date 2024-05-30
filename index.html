@@ -128,6 +128,16 @@ a:hover {
         <img src="しか.png"  ><!--alt="しか"--> <span>しか</span>
         <img src="しか２.jpg"><!--alt="しか"--> <span>しか</span>
         <img src="きゃ.jpg"＞> <!--alt="追いつめられてる"--> <span>きゃ</span>
+        <img src="たら.jpg"＞> alt="たら" <span>たら</span>
+        <img src="だろ.jpg"＞> alt="だろ" <span>だろ</span>
+        <img src="きゃ２.jpg"＞> alt="言わなきゃ" <span>きゃ</span>
+        <img src="だろう.jpg"＞> alt="いったんだろう" <span>だろう</span>
+        <img src="なら.jpg"＞> alt="なら" <span>なら</span>
+        <img src="からかって.jpg"＞> alt="からかって" <span>からかって</span>
+        <img src="ぇば.jpg"＞> alt="ば" <span>ぇば</span>
+        <img src="かもしれない.jpg"＞> alt="かもしれない" <span>かもしれない</span>
+        <img src="かな.jpg"＞> alt="かな" <span>かな</span>
+        <img src="かもしれない２.jpg"＞> alt="かもしれない" <span>かもしれない</span>
     </div>
 </main>
 </body>
@@ -175,7 +185,7 @@ a:hover {
 	}
 	document.getElementById('WK_elements').addEventListener('click',handleSpanClick)
 
-	content =  document.getElementById('WK_elements').textContent;
+	content =  document.getElementById('WK_elements').innerHTML;
 	spanned_content = '';
 	for (let i = 0; i < content.length; i++) {
 	    // Check if the character is not a space
