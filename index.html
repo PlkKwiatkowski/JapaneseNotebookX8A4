@@ -167,27 +167,13 @@ a:hover {
     });
 
 	// Open wanikani listener
-	// function handleSpanClick(event) {
-	//     if (event.target.tagName.toLowerCase() === 'span') {
-	// 	// Open a new tab
-	// 	window.open('https://www.wanikani.com/vocabulary/'+event.target.innerHTML, '_blank');
-	//     }
-	// }
+	function handleSpanClick(event) {
+	    if (event.target.tagName.toLowerCase() === 'span') {
+		// Open a new tab
+		window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
+	    }
+	}
 	
-	// // Add event listener to the specific container
-	// document.getElementById('WK_elements').addEventListener('click', handleSpanClick);
-
-	// document.getElementById('WK_elements').addEventListener('click', handleCharacterClick);
-	
-	// function handleCharacterClick(event) {
-	//     // Check if the clicked element is a text node
-	//         // Show an alert with the clicked character
-	//         window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
-	//         window.open('https://www.wanikani.com/kanji/'+event.target.textContent, '_blank');
-	//         window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
-	//         window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
-	    
-	// }
 
 	content =  document.getElementById('WK_elements').textContent;
 	spanned_content = '';
