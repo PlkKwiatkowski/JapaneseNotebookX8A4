@@ -80,7 +80,7 @@ a:hover {
 <main>
 	<h1>WaniKani</h1>
 	<div id="WK_elements">
-		<span>汚す</span> <span>常識</span> <span>偶</span> <span>難</span> <span>深刻</span> <span>脅威</span> <span>灰</span> <span>選挙</span> <span>損失</span> </break>
+		汚す 常識 偶 難 深刻 脅威 灰 選挙 損失 <br>
 		絆 憐れむ それでも 周 周り愛想 優 寄り添おう魂 遠慮 狩 目的 介 行動して 偉 躊躇 黙 奢り
 	</div>
 	<h1>TaeKim</h1>
@@ -184,7 +184,7 @@ a:hover {
 		spanned_content += '<span>' + content[i] + '</span>';
 	    } else {
 		// If it's a space, just append it as it is
-		spanned_content += ' ';
+		spanned_content += content[i];
 	    }
 	}
 	 document.getElementById('WK_elements').innerHTML = spanned_content;
