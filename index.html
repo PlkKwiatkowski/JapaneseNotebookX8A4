@@ -179,7 +179,7 @@ a:hover {
 	spanned_content = '';
 	for (let i = 0; i < content.length; i++) {
 	    // Check if the character is not a space
-	    if (content[i] !== ' ') {
+	    if (/^[\u4E00-\u9FFF]$/.test(content[i]) ) {
 		// Wrap the character in a span element
 		spanned_content += '<span>' + content[i] + '</span>';
 	    } else {
