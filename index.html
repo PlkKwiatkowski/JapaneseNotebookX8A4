@@ -173,7 +173,7 @@ a:hover {
 		window.open('https://www.wanikani.com/kanji/'+event.target.innerHTML, '_blank');
 	    }
 	}
-	
+	document.getElementById('WK_elements').addEventListener('click',handleSpanClick)
 
 	content =  document.getElementById('WK_elements').textContent;
 	spanned_content = '';
