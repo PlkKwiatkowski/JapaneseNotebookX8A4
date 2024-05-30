@@ -177,14 +177,14 @@ a:hover {
 
 	content =  document.getElementById('WK_elements').textContent;
 	spanned_content = '';
-	for (let i = 0; i < spanned_content.length; i++) {
+	for (let i = 0; i < content.length; i++) {
 	    // Check if the character is not a space
-	    if (spanned_content[i] !== ' ') {
+	    if (content[i] !== ' ') {
 		// Wrap the character in a span element
-		modifiedContent += '<span>' + spanned_content[i] + '</span>';
+		spanned_content += '<span>' + content[i] + '</span>';
 	    } else {
 		// If it's a space, just append it as it is
-		modifiedContent += ' ';
+		spanned_content += ' ';
 	    }
 	}
 	 document.getElementById('WK_elements').innerHTML = spanned_content;
